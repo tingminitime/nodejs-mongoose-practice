@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "6f80ba21-4e91-48d9-b6c7-b497e9447df1",
+		"name": "nodejs-mongodb-posts-sample-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts?pageSize=10&currentPage=1",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts/62626335781b20e9bea01cd5",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62626335781b20e9bea01cd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"電影\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文3\"\r\n}"
+				},
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete single post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts/62626335781b20e9bea01cd5",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62626335781b20e9bea01cd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"電影\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文2222\"\r\n}"
+				},
+				"url": {
+					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts/6262612dbb766c6cd75e0e29",
+					"protocol": "https",
+					"host": [
+						"nodejs-mongoose-practice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6262612dbb766c6cd75e0e29"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
