@@ -63,7 +63,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"電影\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文3\"\r\n}"
+					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"迷因\", \"貓咪\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文11\"\r\n}"
 				},
 				"url": {
 					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts",
@@ -128,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"電影\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文2222\"\r\n}"
+					"raw": "{\r\n    \"name\": \"Tim\",\r\n    \"tags\": [\"電影\"],\r\n    \"type\": \"person\",\r\n    \"image\": \"https://picsum.photos/200/300?random=1\",\r\n    \"content\": \"測試貼文2\"\r\n}"
 				},
 				"url": {
 					"raw": "https://nodejs-mongoose-practice.herokuapp.com/posts/6262612dbb766c6cd75e0e29",
