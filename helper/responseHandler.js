@@ -22,11 +22,9 @@ const successHandler = (res, data = [], message = 'success') => {
 
 const schemaErrorHandler = (errors) => {
   if (!errors) return
-  let result = null
+  let result = {}
   for (const [key, value] of Object.entries(errors)) {
-    result = {
-      [key]: value.message || 'error'
-    }
+    result[key] = value.message || 'error'
   }
   return result
 }
