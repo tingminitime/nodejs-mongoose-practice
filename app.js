@@ -6,11 +6,14 @@ const postsRouter = require('./routes/postsRouter')
 dotenv.config({ path: './config.env' })
 const PORT = process.env.PORT || '8080'
 
+let mongoDB = process.env.DATABASE_DEV
 // MongoDB 連線設定
-const mongoDB = process.env.DATABASE.replace(
-  '<password>',
-  process.env.DATABASE_PASSWORD
-)
+if (process.env.NODE_ENV === 'production') {
+  mongoDB = process.env.DATABASE.replace(
+    '<password>',
+    process.env.DATABASE_PASSWORD
+  )
+}
 
 const options = {
   serverSelectionTimeoutMS: 5000,

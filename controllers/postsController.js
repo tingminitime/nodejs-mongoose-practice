@@ -51,6 +51,10 @@ const addNewPostHandler = async (res, reqData) => {
     errorHandler(res, statusCode.BAD_REQUEST, '欄位不可為空')
   } else {
     try {
+      if (!reqData.content) {
+        errorHandler(res, statusCode.BAD_REQUEST, 'content 不可為空')
+        return
+      }
       const newPost = await Post.create({
         name: reqData.name,
         tags: reqData.tags,
@@ -120,7 +124,11 @@ const updatePostHandler = async (res, urlParser, reqData) => {
         reqData,
         { new: true, runValidators: true }
       )
-      successHandler(res, updatePost, '更新成功')
+      if (updatePost) {
+        successHandler(res, updatePost, '更新成功')
+      } else {
+        errorHandler(res, statusCode.BAD_REQUEST, '無此筆 id 貼文資料或連線錯誤')
+      }
     } catch (error) {
       console.error('TypeError', error)
       const errorMessage = schemaErrorHandler(error.errors)
